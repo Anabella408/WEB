@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Panadería AyL — Contacto y redes</title>
+  <style>
+    :root {
+      --rosa-base: #f8d8e7;
+      --rosa-1: #ffd1dc;
+      --rosa-2: #ffc6e0;
+      --texto: #3a2d32;
+      --subtexto: #6b4f57;
+      --card: #ffffffcc;
+      --borde: #ffffff80;
+      --accent: #ffb7c5;
+    }
+
+    /* Fondo pastel rosado con patrón suave */
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: var(--texto);
+      background:
+        radial-gradient(1200px 600px at 0% 0%, var(--rosa-1) 0%, var(--rosa-base) 55%, var(--rosa-2) 100%),
+        var(--rosa-base);
+      min-height: 100vh;
+    }
+
+    /* Patrón decorativo de panadería en SVG (emoji) */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      opacity: 0.25;
+      background-image: url("data:image/svg+xml;utf8,\
+      <svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'>\
+        <text x='22' y='48' font-size='28'>🍞</text>\
+        <text x='98' y='48' font-size='28'>🥐</text>\
+        <text x='22' y='110' font-size='28'>🧁</text>\
+        <text x='98' y='110' font-size='28'>🍩</text>\
+      </svg>");
+      background-size: 160px 160px;
+      pointer-events: none;
+    }
+
+    .wrap {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .accent {
+      height: 6px;
+      width: 90px;
+      border-radius: 999px;
+      margin: 0.5rem auto 1.25rem;
+      background: linear-gradient(90deg, var(--accent), var(--rosa-1), var(--rosa-2));
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.25rem;
+      letter-spacing: 0.3px;
+    }
+    p.lead {
+      margin: 0.25rem 0 0;
+      color: var(--subtexto);
+      font-size: 1.05rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    @media (max-width: 860px) {
+      .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 520px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--borde);
+      border-radius: 16px;
+      padding: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      backdrop-filter: blur(1.5px);
+    }
+
+    .icon {
+      width: 40px;
+      height: 40px;
+      flex: 0 0 40px;
+    }
+
+    .content {
+      flex: 1;
+    }
+
+    .title {
+      font-weight: 600;
+      margin: 0 0 0.15rem 0;
+    }
+    .desc {
+      margin: 0;
+      color: var(--subtexto);
+      font-size: 0.95rem;
+    }
+
+    .actions {
+      margin-top: 0.75rem;
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.55rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid var(--borde);
+      background: #fff;
+      color: var(--texto);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: transform 0.08s ease, box-shadow 0.2s ease;
+    }
+    .btn:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(0,0,0,0.12); }
+    .btn:active { transform: translateY(0); }
+
+    .small {
+      font-size: 0.9rem;
+      color: var(--subtexto);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Panadería AyL</h1>
+      <div class="accent" aria-hidden="true"></div>
+      <p class="lead">Contactanos y seguinos en nuestras redes</p>
+    </header>
+
+    <section class="grid" aria-label="Medios de contacto y redes">
+      <!-- WhatsApp -->
+      <article class="card">
+        <!-- Icono WhatsApp (SVG) -->
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="#25D366" d="M12 2a10 10 0 0 0-8.94 14.56L2 22l5.6-1.47A10 10 0 1 0 12 2z"/>
+          <path fill="#fff" d="M16.86 14.21c-.25.7-1.22 1.29-1.92 1.47-.51.13-1.18.23-3.41-.72a9.37 9.37 0 0 1-3.21-2.61c-.65-.79-1.37-2.08-1.37-2.08s-.33-.9.2-1.45c.23-.23.64-.53.64-.53s.14-.09.36 0 .53.17.53.17.41.16.61.9c.25.86.58 1.25.58 1.25s.09.16-.06.36c-.27.36-.55.59-.27 1.08.28.49 1.24 2.03 2.96 2.76.62.25.95.17 1.29-.08.27-.21.61-.8.61-.8s.12-.2.34-.12a6.4 6.4 0 0 1 1.35.63c.47.27.95.43.8.98z"/>
+        </svg>
+        <div class="content">
+          <p class="title">WhatsApp</p>
+          <p class="desc">3743 481689</p>
+          <div class="actions">
+            <!-- Reemplaza el número si es necesario, usando formato internacional: 54 + número -->
+            <a class="btn" href="https://wa.me/543743481689" target="_blank" rel="noopener">Enviar mensaje</a>
+            <span class="small">Abrirá WhatsApp</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Facebook -->
+      <article class="card">
+        <!-- Icono Facebook (SVG) -->
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="#1877F2" d="M12 2.04C6.48 2.04 2.04 6.48 2.04 12c0 4.98 3.66 9.11 8.44 9.93v-7.02H8.3v-2.9h2.18V9.84c0-2.16 1.29-3.36 3.26-3.36.94 0 1.93.17 1.93.17v2.12h-1.09c-1.08 0-1.41.67-1.41 1.35v1.62h2.4l-.38 2.9h-2.02v7.02c4.78-.82 8.44-4.95 8.44-9.93 0-5.52-4.44-9.96-9.96-9.96z"/>
+        </svg>
+        <div class="content">
+          <p class="title">Facebook</p>
+          <p class="desc">Panadería AyL</p>
+          <div class="actions">
+            <!-- Si tu URL difiere, reemplaza el usuario -->
+            <a class="btn" href="https://www.facebook.com/PanaderiaAyL" target="_blank" rel="noopener">Abrir página</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Instagram -->
+      <article class="card">
+        <!-- Icono Instagram (SVG) -->
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <radialGradient id="ig" cx="50%" cy="50%" r="75%">
+            <stop offset="0%" stop-color="#fdf497"/>
+            <stop offset="25%" stop-color="#fd5949"/>
+            <stop offset="50%" stop-color="#d6249f"/>
+            <stop offset="100%" stop-color="#285AEB"/>
+          </radialGradient>
+          <path fill="url(#ig)" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5z"/>
+          <rect x="7" y="7" width="10" height="10" rx="5" ry="5" fill="#fff"/>
+          <circle cx="12" cy="12" r="3.2" fill="url(#ig)"/>
+          <circle cx="17.2" cy="6.8" r="1.2" fill="#fff"/>
+        </svg>
+        <div class="content">
+          <p class="title">Instagram</p>
+          <p class="desc">Panadería AyL</p>
+          <div class="actions">
+            <!-- Ajusta el usuario si corresponde -->
+            <a class="btn" href="https://www.instagram.com/panaderiaayl" target="_blank" rel="noopener">Ver perfil</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Google Maps -->
+      <article class="card">
+        <!-- Icono mapa (SVG) -->
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="#EA4335" d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7z"/>
+          <circle cx="12" cy="9" r="2.75" fill="#fff"/>
+        </svg>
+        <div class="content">
+          <p class="title">Ubicación</p>
+          <p class="desc">Encontranos en Google Maps</p>
+          <div class="actions">
+            <!-- Busca por nombre; si tenés la URL exacta del lugar, reemplázala -->
+            <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Panader%C3%ADa%20AyL" target="_blank" rel="noopener">
+              Abrir en Maps
+            </a>
+          </div>
+        </div>
+      </article>
+    </section>
+  </div>
+</body>
+</html>

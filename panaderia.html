@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Panadería AyL</title>
+  <style>
+    body {
+      background-color: #f8c8dc; /* rosado pastel */
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Logo circular */
+    .logo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background-color: white;
+      margin: 30px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      overflow: hidden; /* asegura que la imagen quede dentro del círculo */
+    }
+
+    .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;   /* recorta la imagen para que encaje sin deformarse */
+    }
+
+    h1 {
+      color: #a64d79;
+      margin-bottom: 20px;
+    }
+
+    .botones {
+      margin: 20px;
+    }
+
+    .botones button {
+      background-color: #fff;
+      border: 2px solid #a64d79;
+      border-radius: 8px;
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      color: #a64d79;
+      transition: 0.3s;
+    }
+
+    .botones button:hover {
+      background-color: #a64d79;
+      color: #fff;
+    }
+
+    .imagen-esquina {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 60px;
+      height: 60px;
+    }
+
+    footer {
+      margin-top: 50px;
+      font-size: 14px;
+      color: #555;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+  <!-- Logo redondo con imagen -->
+  <div class="logo">
+    <img src="imagen.JPG" alt="Logo Panadería">
+  </div>
+
+  <!-- Texto de bienvenida -->
+  <h1>Bienvenido a Panadería</h1>
+
+  <!-- Botones -->
+  <div class="botones">
+  <a href="nosotros.html" class="btn"><button>Nosotros</button></a>
+  <a href="contacto.html" class="btn"><button>Sitios de contacto</button></a>
+  <a href="productos.html" class="btn"><button>Productos</button></a>
+  </div>
+
+  <!-- Imagen pequeña en la esquina derecha -->
+  <img src="imagen.jpg" alt="imagen pequeña" class="imagen-esquina">
+
+  <!-- Nota de agua -->
+  <footer>
+    Página creada por Benitez Anabella y Reckziegel Luciana
+  </footer>
+</body>
+</html>
